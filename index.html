@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Pra Você 💜</title>
+<style>
+  body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background: radial-gradient(circle at center, #a367dc 0%, #2b0057 100%);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+  }
+  h1 {
+    font-size: 2em;
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  button {
+    background: #d98eff;
+    color: #2b0057;
+    border: none;
+    padding: 15px 30px;
+    font-size: 1.2em;
+    border-radius: 12px;
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+  }
+  button:hover {
+    background: #b370f0;
+    transform: scale(1.05);
+  }
+  .hearts {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    overflow: hidden;
+    z-index: -1;
+  }
+  .heart {
+    position: absolute;
+    font-size: 24px;
+    animation: float 6s linear infinite;
+    opacity: 0.8;
+  }
+  @keyframes float {
+    0% { transform: translateY(100vh) scale(1) rotate(0deg); opacity: 0.8;}
+    100% { transform: translateY(-10vh) scale(1.4) rotate(360deg); opacity: 0;}
+  }
+</style>
+</head>
+<body>
+  <h1>💜 Esse site é pra você, minha princesa 💚</h1>
+  <button onclick="location.href='2.html'">Entrar</button>
+
+  <div class="hearts" id="hearts"></div>
+
+  <script>
+    const heartsContainer = document.getElementById('hearts');
+    const colors = ['💜', '💚'];
+    function createHeart() {
+      const heart = document.createElement('div');
+      heart.classList.add('heart');
+      heart.textContent = colors[Math.floor(Math.random() * colors.length)];
+      heart.style.left = Math.random() * 100 + 'vw';
+      heart.style.animationDuration = 4 + Math.random() * 4 + 's';
+      heart.style.fontSize = 20 + Math.random() * 20 + 'px';
+      heartsContainer.appendChild(heart);
+      setTimeout(() => heart.remove(), 7000);
+    }
+    setInterval(createHeart, 300);
+  </script>
+</body>
+</html>

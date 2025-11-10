@@ -1,0 +1,271 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Pra Você 💜💚</title>
+<style>
+  :root {
+    --roxo1: #2b0057;
+    --roxo2: #6f2bb3;
+    --lilas: #d98eff;
+    --texto: #ffffff;
+    --card: #3a0f5a;
+  }
+  html, body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, var(--roxo1), var(--roxo2));
+    color: var(--texto);
+    overflow-x: hidden;
+  }
+  .container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  header {
+    text-align: center;
+    padding-top: 30px;
+  }
+  header h1 {
+    color: var(--lilas);
+    font-size: 2.2em;
+  }
+  header p {
+    line-height: 1.7;
+    font-size: 1.1em;
+  }
+  .album {
+    margin-top: 40px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 15px;
+  }
+  .album img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 16px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.4);
+    transition: transform 0.3s ease;
+  }
+  .album img:hover {
+    transform: scale(1.05);
+  }
+  .alice {
+    text-align: center;
+    margin-top: 60px;
+    background: rgba(255,255,255,0.06);
+    padding: 20px;
+    border-radius: 14px;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.4);
+  }
+  .alice img {
+    width: 100%;
+    max-width: 420px;
+    border-radius: 12px;
+    margin-bottom: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+  }
+  .alice p {
+    font-size: 1.1em;
+    color: var(--lilas);
+  }
+
+  /* nova seção */
+  .languages {
+    margin-top: 70px;
+    background: rgba(255,255,255,0.05);
+    padding: 30px;
+    border-radius: 16px;
+    box-shadow: 0 6px 25px rgba(0,0,0,0.5);
+  }
+  .languages h2 {
+    text-align: center;
+    color: var(--lilas);
+    margin-bottom: 25px;
+    font-size: 1.8em;
+  }
+  .languages p {
+    columns: 2;
+    column-gap: 30px;
+    text-align: left;
+    font-size: 1.05em;
+    line-height: 1.8;
+  }
+
+  footer {
+    text-align: center;
+    margin: 40px 0;
+    opacity: 0.8;
+  }
+
+  /* corações flutuando */
+  .hearts {
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    pointer-events: none;
+    overflow: hidden;
+    z-index: 0;
+  }
+  .heart {
+    position: absolute;
+    font-size: 24px;
+    animation: float 6s linear infinite;
+    opacity: 0.8;
+  }
+  @keyframes float {
+    0% { transform: translateY(100vh) scale(1) rotate(0deg); opacity: 0.9;}
+    100% { transform: translateY(-10vh) scale(1.4) rotate(360deg); opacity: 0;}
+  }
+
+  /* botão de música */
+  #music-btn {
+    background: var(--lilas);
+    color: var(--roxo1);
+    border: none;
+    padding: 10px 20px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: bold;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.4);
+  }
+  #music-btn:hover {
+    transform: scale(1.05);
+  }
+
+  /* responsividade */
+  @media (max-width: 768px) {
+    .album img {
+      height: 180px;
+    }
+    header p {
+      font-size: 1em;
+    }
+    .languages p {
+      columns: 1;
+      text-align: center;
+    }
+  }
+</style>
+</head>
+<body>
+
+<div class="hearts" id="hearts"></div>
+
+<div class="container">
+  <header>
+    <h1>💜 De Jony para Giovana 💚</h1>
+    <p>Oi minha princesaaaa, tudo bem? Fiz esse site pra você (deu trabalho tá?) saber o quanto você é especial na minha vida, e o quanto eu te amo muitooo, saiba que desde que você chegou no meu mundo, meus dias estão ficando cada vez melhores com você. Eu fico muito impressionado do quanto você me suporta, mesmo sabendo que eu sou desse jeito, tem vezes que eu falo demais, fico te perturbando, fico perguntando se você tá bem o tempo todo, me preocupo até demais... Mas saiba que é porque eu realmente te amo muito, e cada vez mais eu estou gostando de você. Você é uma pessoa muito incrível, consegue fazer qualquer pessoa se atrair pelo jeito, você pode até não perceber as vezes, mas todo mundo gosta de ficar perto de você, porque você é muito especial, eu amo cada jeito seu, quando você vira o rosto a minha vontade de te beijar aumenta mais ainda tá? Kkkkk, o seu jeitinho quando está com vergonha me encanta muito também, quando vc fala "goxtou?" Com aquela voz muito fofa, eu amo ver seus vídeos no tiktok, mesmo que fosse uns 1000 vídeos, eu veria todos, eu amo cada coisa em você, e de verdade, eu espero que a gente possa continuar desse jeito pra sempre 💜💚.
+
+Eu fiz umas coisas pra você ver abaixo👇 ok? 
+Espero que você curta, e isso aqui vai ficar no ar, então você pode entrar quando quiser, a hora que quiser tá bom? Beijos 😘
+
+De: Jony para Giovana</p>
+    <button id="music-btn">🎵 Tocar música</button>
+  </header>
+
+  <section class="album">
+    <img src="gi1.jpg" alt="foto 1">
+    <img src="gi2.jpg" alt="foto 2">
+    <img src="gi3.jpg" alt="foto 3">
+    <img src="gi4.jpg" alt="foto 4">
+    <img src="gi5.jpg" alt="foto 5">
+  </section>
+
+  <section class="alice">
+    <img src="alice.jpg" alt="Foto especial">
+    <p>“Eu iria até outro mundo cheio de jogos difíceis e perigosos só pra salvar você, meu amor.” 💜💚</p>
+  </section>
+
+  <section class="languages">
+    <h2>Eu te amo em todas as línguas 💜🌍</h2>
+    <p>
+      Português — Eu te amo ❤️<br>
+      Inglês — I love you 💕<br>
+      Espanhol — Te amo 💞<br>
+      Francês — Je t’aime 💖<br>
+      Italiano — Ti amo 💘<br>
+      Alemão — Ich liebe dich 💗<br>
+      Japonês — 愛してる (Aishiteru) 💝<br>
+      Coreano — 사랑해 (Saranghae) 💜<br>
+      Chinês — 我爱你 (Wǒ ài nǐ) 💚<br>
+      Russo — Я тебя люблю (Ya tebya lyublyu) 💙<br>
+      Árabe — أحبك (Uhibbuka / Uhibbuki) 💛<br>
+      Grego — Σ' αγαπώ (S'agapó) 💕<br>
+      Turco — Seni seviyorum 💞<br>
+      Sueco — Jag älskar dig 💖<br>
+      Holandês — Ik hou van jou 💘<br>
+      Finlandês — Rakastan sinua 💗<br>
+      Polonês — Kocham cię 💓<br>
+      Hebraico — אני אוהב אותך (Ani ohev otach) 💜<br>
+      Hindi — मैं तुमसे प्यार करता हूँ (Main tumse pyaar karta hoon) 💚<br>
+      Indonésio — Aku cinta kamu 💙<br>
+      Tailandês — ฉันรักคุณ (Chan rak khun) 💛<br>
+      Vietnamita — Anh yêu em 💞<br>
+      Filipino — Mahal kita 💕<br>
+      Húngaro — Szeretlek 💖<br>
+      Dinamarquês — Jeg elsker dig 💘<br>
+      Norueguês — Jeg elsker deg 💗<br>
+      Tcheco — Miluji tě 💓<br>
+      Romeno — Te iubesc 💜<br>
+      Croata — Volim te 💚<br>
+      Eslovaco — Ľúbim ťa 💙<br>
+      Ucraniano — Я тебе кохаю (Ya tebe kokhayu) 💛<br>
+      Catalão — T’estimo 💕<br>
+      Galego — Quérote 💞<br>
+      Islandês — Ég elska þig 💖<br>
+      Malaio — Saya cinta padamu 💘<br>
+      Swahili — Nakupenda 💗<br>
+      Maori — Aroha ahau ki a koe 💓<br>
+      Irlandês — Taim i ngrá leat 💜<br>
+      Escocês — Tha gaol agam ort 💚<br>
+      Bengali — আমি তোমায় ভালোবাসি (Ami tomay bhalobashi) 💙<br>
+      Persa — دوستت دارم (Dooset daram) 💛<br>
+      ... e em todas as outras línguas do mundo, porque o amor não tem fronteiras 💜💚🌎
+    </p>
+  </section>
+
+  <footer>
+    Feito com amor 💜 — Jony
+  </footer>
+</div>
+
+<audio id="musica" src="Djavan_-_Samurai_(mp3.pm).mp3" loop></audio>
+
+<script>
+  // emojis flutuando 💜💚
+  const heartsContainer = document.getElementById('hearts');
+  const cores = ['💜','💚'];
+  function criarCoracao() {
+    const heart = document.createElement('div');
+    heart.classList.add('heart');
+    heart.textContent = cores[Math.floor(Math.random()*cores.length)];
+    heart.style.left = Math.random()*100 + 'vw';
+    heart.style.animationDuration = 4 + Math.random()*4 + 's';
+    heart.style.fontSize = 20 + Math.random()*25 + 'px';
+    heartsContainer.appendChild(heart);
+    setTimeout(()=>heart.remove(), 7000);
+  }
+  setInterval(criarCoracao, 250);
+
+  // música 🎵
+  const audio = document.getElementById('musica');
+  const btn = document.getElementById('music-btn');
+  btn.addEventListener('click', () => {
+    if (audio.paused) {
+      audio.play().catch(()=>{});
+      btn.textContent = '⏸ Pausar música';
+    } else {
+      audio.pause();
+      btn.textContent = '🎵 Tocar música';
+    }
+  });
+  window.addEventListener('load', () => {
+    audio.play().catch(()=>{});
+  });
+</script>
+</body>
+</html>
